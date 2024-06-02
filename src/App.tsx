@@ -6,10 +6,11 @@ import {
   useLocation,
 } from 'react-router-dom'
 // import SubPage1 from './SubPage1'
-import SubPage2 from './SubPage2'
+// import SubPage2 from './SubPage2'
 import MainPage from './MainPage'
 // import { Button } from './components/ui/button'
 import { Dashboard } from './Dashboard'
+import { Dashboard2 } from './Dashboard2'
 // import { SheetContent } from './components/ui/sheet'
 import {
   // Home,
@@ -37,7 +38,7 @@ export default function App() {
         <Sidebar2 />
         <Routes>
           <Route path='dashboard1' element={<Dashboard />} />
-          <Route path='dashboard2' element={<SubPage2 />} />
+          <Route path='dashboard2' element={<Dashboard2 />} />
           <Route path='/' element={<MainPage />} />
         </Routes>
       </Router>
