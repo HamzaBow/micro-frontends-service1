@@ -1,3 +1,5 @@
+import { Navigate } from 'react-router-dom'
+
 export default function MainPage() {
-  return <div>MainPage</div>;
+  return <Navigate to='/dashboard1' replace={true} />
 }
