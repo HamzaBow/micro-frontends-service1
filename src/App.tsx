@@ -1,31 +1,16 @@
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-import Button from "./Button";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SubPage1 from "./SubPage1";
+import SubPage2 from "./SubPage2";
+import MainPage from "./MainPage";
 
-function App() {
+export default function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <Button />
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <Router basename="/service1">
+      <Routes>
+        <Route path="subpage1" element={<SubPage1 />} />
+        <Route path="subpage2" element={<SubPage2 />} />
+        <Route path="/" element={<MainPage />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
